@@ -1,57 +1,74 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { FiBattery, FiZap, FiSun, FiSettings, FiShield, FiCpu } from "react-icons/fi";
+
+const services = [
+  {
+    icon: FiZap,
+    title: "HT/LT Electrical Works",
+    desc: "Complete high tension and low tension electrical installations for large-scale developments.",
+  },
+  {
+    icon: FiBattery,
+    title: "Power Distribution",
+    desc: "Substation design, panel manufacturing, and distribution network engineering.",
+  },
+  {
+    icon: FiSun,
+    title: "Solar & Renewable Energy",
+    desc: "Rooftop solar installations and hybrid energy solutions for sustainable developments.",
+  },
+  {
+    icon: FiSettings,
+    title: "Electrical Maintenance",
+    desc: "Annual maintenance contracts and 24/7 breakdown support for electrical infrastructure.",
+  },
+  {
+    icon: FiShield,
+    title: "Safety & Compliance",
+    desc: "Electrical safety audits, earthing systems, and lightning protection solutions.",
+  },
+  {
+    icon: FiCpu,
+    title: "Automation & Controls",
+    desc: "Building management systems, SCADA integration, and smart electrical controls.",
+  },
+];
+
 const Services = () => {
-  const services = [
-    {
-      number: "01",
-      title: "RESIDENTIAL",
-      description: "Crafting homes that reflect individual lifestyles while maintaining architectural integrity"
-    },
-    {
-      number: "02", 
-      title: "COMMERCIAL",
-      description: "Designing functional spaces that enhance business environments and user experiences"
-    },
-    {
-      number: "03",
-      title: "RENOVATION",
-      description: "Transforming existing structures with contemporary sensibilities and sustainable practices"
-    },
-    {
-      number: "04",
-      title: "CONSULTATION",
-      description: "Providing expert guidance on design direction, planning, and architectural solutions"
-    }
-  ];
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="py-32 bg-background">
+    <section id="services" ref={ref} className="py-24 bg-card">
       <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
-            <h2 className="text-minimal text-muted-foreground mb-4">SERVICES</h2>
-            <h3 className="text-4xl md:text-6xl font-light text-architectural">
-              What We Do
-            </h3>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-x-20 gap-y-16">
-            {services.map((service, index) => (
-              <div key={index} className="group">
-                <div className="flex items-start space-x-6">
-                  <span className="text-minimal text-muted-foreground font-medium">
-                    {service.number}
-                  </span>
-                  <div>
-                    <h4 className="text-2xl font-light mb-4 text-architectural group-hover:text-muted-foreground transition-colors duration-500">
-                      {service.title}
-                    </h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="text-section-label mb-4 block">Our Services</span>
+          <h2 className="text-display text-3xl md:text-4xl text-foreground">
+            Comprehensive <span className="text-primary">Electrical Solutions</span>
+          </h2>
+        </div>
+
+        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, i) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="group p-6 rounded-lg border border-border bg-background hover:border-primary/40 transition-all duration-300 hover:shadow-[var(--shadow-glow)]"
+            >
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <service.icon className="text-primary text-xl" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">
+                {service.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {service.desc}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
