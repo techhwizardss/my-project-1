@@ -27,9 +27,9 @@ const About = () => {
               infrastructure for residential and commercial developments.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              We partner with India's top real estate developers — including 
-              Signature Global, Bestech, M3M India, and Vatika Group — to deliver 
-              world-class electrical systems that power modern living and commercial spaces.
+              We partner with India's top real estate developers including 
+              Signature Global, Bestech, M3M India, and Vatika Group to deliver 
+              world class electrical systems that power modern living and commercial spaces.
             </p>
           </motion.div>
 
