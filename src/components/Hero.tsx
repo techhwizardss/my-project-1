@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiArrowRight, FiZap } from "react-icons/fi";
 import heroImg from "@/assets/hero-electrical.jpg";
-import ElectricBackground from "./ElectricalBackground";
 
 const Hero = () => {
   return (
@@ -14,19 +13,10 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
 
-      <ElectricBackground />
+      <ElectricalBackground />
 
       {/* Glow accent */}
-      <motion.div
-        animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/3 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"
-      />
-      <motion.div
-        animate={{ scale: [1.2, 1, 1.2], opacity: [0.05, 0.15, 0.05] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"
-      />
+      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-32">
@@ -85,35 +75,14 @@ const Hero = () => {
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-semibold rounded hover:bg-primary/90 transition-colors"
             >
-            <FiZap className="animate-pulse" /> Start a Project <FiArrowRight />
-            </motion.a>
-            <motion.a
+              Start a Project <FiArrowRight />
+            </a>
+            <a
               href="#projects"
-               whileHover={{ scale: 1.05, borderColor: "hsl(207 100% 53%)" }}
-              whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-2 px-7 py-3.5 border border-border text-foreground font-semibold rounded hover:border-primary hover:text-primary transition-colors"
             >
               View Our Work
-            </motion.a>
-          </motion.div>
-          {/* Scrolling indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5 }}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2"
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-6 h-10 rounded-full border-2 border-primary/40 flex items-start justify-center pt-2"
-            >
-              <motion.div
-                animate={{ opacity: [1, 0], y: [0, 8] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-1 h-2 rounded-full bg-primary"
-              />
-            </motion.div>
+            </a>
           </motion.div>
           
         </div>
