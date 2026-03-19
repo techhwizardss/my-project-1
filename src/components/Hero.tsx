@@ -88,6 +88,27 @@ const Hero = () => {
           
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+      >
+        <span className="text-xs text-muted-foreground tracking-widest uppercase">Scroll</span>
+        <motion.div
+          className="w-6 h-10 border-2 border-muted-foreground/40 rounded-full flex justify-center pt-2"
+          animate={{ borderColor: ["hsl(var(--muted-foreground) / 0.4)", "hsl(var(--primary))", "hsl(var(--muted-foreground) / 0.4)"] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <motion.div
+            className="w-1.5 h-1.5 bg-primary rounded-full"
+            animate={{ y: [0, 16, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
