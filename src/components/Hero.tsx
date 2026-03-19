@@ -96,7 +96,7 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
       >
-        <span className="text-xs text-muted-foreground tracking-widest uppercase">Scroll</span>
+        
         <motion.div
           className="w-6 h-10 border-2 border-muted-foreground/40 rounded-full flex justify-center pt-2"
           animate={{ borderColor: ["hsl(var(--muted-foreground) / 0.4)", "hsl(var(--primary))", "hsl(var(--muted-foreground) / 0.4)"] }}
