@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { FiMapPin, FiPhone, FiMail, FiSend } from "react-icons/fi";
+import { FiMapPin, FiPhone, FiMail, FiSend, FiCheck, FiZap } from "react-icons/fi";
+import ElectricBackground from "./ElectricBackground";
 
 const Contact = () => {
   const ref = useRef(null);

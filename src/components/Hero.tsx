@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiArrowRight, FiZap } from "react-icons/fi";
 import heroImg from "@/assets/hero-electrical.jpg";
+import ElectricalBackground from "./ElectricalBackground";
 
 const Hero = () => {
   return (
