@@ -76,7 +76,7 @@ const Hero = () => {
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-semibold rounded hover:bg-primary/90 transition-colors"
             >
               Start a Project <FiArrowRight />
-            </a>
+            </motion.a>
             <a
               href="#projects"
               className="inline-flex items-center gap-2 px-7 py-3.5 border border-border text-foreground font-semibold rounded hover:border-primary hover:text-primary transition-colors"
