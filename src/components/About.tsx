@@ -23,7 +23,7 @@ const About = () => {
             <p className="text-muted-foreground leading-relaxed mb-6">
               Sharma Electricals Pvt. Ltd. is a leading B2B electrical engineering 
               and contracting company headquartered in Gurugram, Haryana. With over 
-              23 years of trusted experience, we specialize in large-scale electrical 
+              26 years of trusted experience, we specialize in large-scale electrical 
               infrastructure for residential and commercial developments.
             </p>
             <p className="text-muted-foreground leading-relaxed">

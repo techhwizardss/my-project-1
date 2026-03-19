@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiArrowRight, FiZap } from "react-icons/fi";
 import heroImg from "@/assets/hero-electrical.jpg";
+import ElectricalBackground from "./ElectricalBackground";
 
 const Hero = () => {
   return (
@@ -32,7 +33,7 @@ const Hero = () => {
               transition={{ duration: 2, repeat: Infinity }}
               className="glow-dot"
             />
-            <span className="text-section-label">23+ Years of Excellence</span>
+            <span className="text-section-label">26+ Years of Excellence</span>
           </motion.div>
 
           <motion.h1
@@ -76,7 +77,7 @@ const Hero = () => {
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground font-semibold rounded hover:bg-primary/90 transition-colors"
             >
               Start a Project <FiArrowRight />
-            </a>
+            </motion.a>
             <a
               href="#projects"
               className="inline-flex items-center gap-2 px-7 py-3.5 border border-border text-foreground font-semibold rounded hover:border-primary hover:text-primary transition-colors"

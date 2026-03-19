@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { FiMapPin, FiPhone, FiMail, FiSend } from "react-icons/fi";
+import { FiMapPin, FiPhone, FiMail, FiSend, FiCheck, FiZap } from "react-icons/fi";
+import ElectricalBackground from "./ElectricalBackground";
 
 const Contact = () => {
   const ref = useRef(null);
@@ -21,7 +22,7 @@ const Contact = () => {
 
   return (
     <section id="contact" ref={ref} className="py-24 bg-card relative overflow-hidden">
-      <ElectricBackground className="opacity-20" />
+      <ElectricalBackground className="opacity-20" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
