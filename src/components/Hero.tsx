@@ -33,7 +33,7 @@ const Hero = () => {
               transition={{ duration: 2, repeat: Infinity }}
               className="glow-dot"
             />
-            <span className="text-section-label">26+ Years of Excellence</span>
+            <span className="text-section-label">23+ Years of Excellence</span>
           </motion.div>
 
           <motion.h1
@@ -61,7 +61,7 @@ const Hero = () => {
             className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
           >
             Powering India's largest real estate developments with world-class
-            electrical infrastructure solutions since 2002.
+            electrical infrastructure solutions since 2003.
           </motion.p>
 
           <motion.div

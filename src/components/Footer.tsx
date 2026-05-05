@@ -73,18 +73,18 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start gap-2">
                 <FiMapPin className="text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">Gurugram, Haryana, India</span>
+                <span className="text-sm text-muted-foreground">Office no. 327, 3rd floor, Bestech Citygate, Sec-81A, Gurugram, Haryana</span>
               </div>
               <div className="flex items-center gap-2">
                 <FiPhone className="text-primary flex-shrink-0" />
-                <a href="tel:+919876543210" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  +91 98765 43210
+                <a href="tel:+919811617703" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  +91 9811617703
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <FiMail className="text-primary flex-shrink-0" />
-                <a href="mailto:info@sharmaelectricals.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  info@sharmaelectricals.com
+                <a href="mailto:sharma.electricals99@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  sharma.electricals99@gmail.com
                 </a>
               </div>
             </div>
