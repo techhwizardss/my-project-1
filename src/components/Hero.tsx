@@ -1,17 +1,40 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FiArrowRight, FiZap } from "react-icons/fi";
 import heroImg from "@/assets/hero-electrical.jpg";
+import heroSlide2 from "@/assets/hero-slide-2.jpg";
+import heroSlide3 from "@/assets/hero-slide-3.jpg";
+import heroSlide4 from "@/assets/hero-slide-4.jpg";
+import heroSlide5 from "@/assets/hero-slide-5.jpg";
+import heroSlide6 from "@/assets/hero-slide-6.jpg";
 import ElectricalBackground from "./ElectricalBackground";
 
+const heroSlides = [heroImg, heroSlide2, heroSlide3, heroSlide4, heroSlide5, heroSlide6];
+
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImg})` }}
-      />
+      {/* Background slideshow */}
+      <AnimatePresence mode="sync">
+        <motion.div
+          key={currentSlide}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 1 }}
+          transition={{ opacity: { duration: 1.5, ease: "easeInOut" }, scale: { duration: 6, ease: "easeOut" } }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroSlides[currentSlide]})` }}
+        />
+      </AnimatePresence>
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
 
       <ElectricalBackground />
