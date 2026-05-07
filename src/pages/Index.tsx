@@ -8,6 +8,7 @@ import Leadership from "@/components/Leadership";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import LeadCaptureModal from "@/components/LeadCaptureModal";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <Clients />
       <Contact />
       <Footer />
+      <LeadCaptureModal />
     </div>
   );
 };
