@@ -35,7 +35,7 @@ const Hero = () => {
           style={{ backgroundImage: `url(${heroSlides[currentSlide]})` }}
         />
       </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-background/10" />
 
       <ElectricalBackground />
 
