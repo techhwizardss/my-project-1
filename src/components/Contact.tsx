@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { FiMapPin, FiPhone, FiMail, FiSend, FiCheck, FiZap } from "react-icons/fi";
+import { FiMapPin, FiPhone, FiMail, FiSend, FiCheck, FiZap, FiExternalLink } from "react-icons/fi";
 import ElectricalBackground from "./ElectricalBackground";
 
 const schema = z.object({
@@ -130,17 +130,27 @@ const Contact = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
               whileHover={{ scale: 1.01 }}
-              className="rounded-lg overflow-hidden border border-border mt-4"
+              className="rounded-lg overflow-hidden border border-border mt-4 relative"
             >
               <iframe
-                title="Sharma Electricals Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.54904199868!2d76.90346!3d28.4594965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d582e38859%3A0x2cf5fe8e5c64b1e!2sGurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                title="Sharma Electricals — Bestech Citygate, Sector 81A, Gurugram"
+                src="https://maps.google.com/maps?q=28.3726942,76.9453924&z=18&output=embed"
                 width="100%"
                 height="200"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
               />
+              <a
+                href="https://www.google.com/maps/place/Bestech+Citygate/@28.3726942,76.9453924,18z/data=!4m7!3m6!1s0x390d3db43d23f34f:0x245f39d482eecb46!4b1!8m2!3d28.3726942!4d76.9453924!16s%2Fg%2F11c3s98xzm"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Sharma Electricals office location in Google Maps"
+                className="absolute bottom-3 right-3 inline-flex items-center gap-2 px-3 py-2 rounded-md bg-background/90 backdrop-blur-sm border border-border text-xs font-medium text-foreground shadow-lg hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              >
+                <FiExternalLink className="text-sm" />
+                Open in Google Maps
+              </a>
             </motion.div>
           </motion.div>
 
